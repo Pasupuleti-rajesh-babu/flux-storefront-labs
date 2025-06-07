@@ -1,0 +1,37 @@
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">{{title}}</h1>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <aside class="col-span-1">
+            <h2 class="text-xl font-bold mb-4">Filters</h2>
+            <div class="space-y-2">
+                <div>
+                    <h3 class="font-semibold mb-2">Category</h3>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" data-tag="category-new-arrivals">
+                        <span class="ml-2">New Arrivals</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" data-tag="category-best-sellers">
+                        <span class="ml-2">Best Sellers</span>
+                    </label>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Color</h3>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" data-tag="color-black">
+                        <span class="ml-2">Black</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" data-tag="color-white">
+                        <span class="ml-2">White</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+        <main class="col-span-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Product grid will go here -->
+            </div>
+        </main>
+    </div>
+</div> 
