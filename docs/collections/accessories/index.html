@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux Storefront</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body data-relative-path="../../">
+    <header class="border-b">
+        <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between py-4">
+        <div class="text-2xl font-bold">
+            <a href="../../">Flux</a>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="../../collections/all/" class="hover:text-gray-500">Shop</a>
+            <a href="#" class="hover:text-gray-500">About</a>
+            <a href="#" class="hover:text-gray-500">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <button id="search-overlay-toggle" class="hover:text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+            <button id="cart-button" class="ml-4">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </button>
+            <button id="mobile-menu-button" class="md:hidden hover:text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="../../collections/all/" class="block py-2 px-4 text-sm hover:bg-gray-100">Shop</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100">About</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100">Contact</a>
+    </div>
+</div> 
+    </header>
+    <main>
+        <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">Accessories</h1>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <aside class="col-span-1">
+            <h2 class="text-xl font-bold mb-4">Filters</h2>
+            <div class="space-y-2">
+                <div>
+                    <h3 class="font-semibold mb-2">Category</h3>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" data-tag="category-new-arrivals">
+                        <span class="ml-2">New Arrivals</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" data-tag="category-best-sellers">
+                        <span class="ml-2">Best Sellers</span>
+                    </label>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Color</h3>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" data-tag="color-black">
+                        <span class="ml-2">Black</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" data-tag="color-white">
+                        <span class="ml-2">White</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+        <main class="col-span-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                
+            </div>
+        </main>
+    </div>
+</div> 
+    </main>
+    <footer class="border-t mt-12 py-8">
+        <div class="container mx-auto px-4">
+    <div class="text-center text-gray-600">
+        &copy; 2024 Flux Storefront. All rights reserved.
+    </div>
+</div> 
+    </footer>
+
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-20">
+    <div class="flex items-center justify-between p-4 border-b">
+        <h2 class="text-lg font-bold">Your Cart</h2>
+        <button id="cart-drawer-close" class="hover:text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+    <div id="cart-items-container" class="p-4 overflow-y-auto h-full pb-40">
+        <!-- Cart items will go here -->
+        <p class="text-center text-gray-500">Your cart is empty.</p>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 p-4 border-t bg-white">
+        <div class="flex justify-between font-bold mb-4">
+            <span>Subtotal</span>
+            <span>$0.00</span>
+        </div>
+        <button class="w-full bg-gray-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-700">Checkout</button>
+    </div>
+</div>
+<div id="cart-drawer-overlay" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-10 hidden"></div> 
+
+    <div id="search-overlay" class="hidden fixed inset-0 bg-white z-50 p-4 sm:p-6 lg:p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-bold">SEARCH OUR SITE</h2>
+            <button id="search-overlay-close" class="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="relative mb-8">
+            <input type="search" id="search-overlay-input" placeholder="Search" class="w-full text-2xl p-4 border-b-2 border-gray-300 focus:outline-none focus:border-black">
+            <svg class="absolute right-4 top-1/2 -translate-y-1/2 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold mb-4">Search results</h3>
+            <div id="search-overlay-results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Search results will be injected here -->
+            </div>
+             <div class="mt-8 text-center">
+                <a href="#" id="view-all-results-link" class="text-lg font-semibold hidden">Click to view all "" &rarr;</a>
+            </div>
+        </div>
+    </div>
+</div> 
+
+    <script src="../../scripts/main.js" type="module"></script>
+</body>
+</html> 
