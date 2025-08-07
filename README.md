@@ -1,5 +1,7 @@
 # Flux Storefront Labs
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://pasupuleti-rajesh-babu.github.io/flux-storefront-labs/)
+
 ## High-Performance, Adaptable eCommerce Theme
 
 Flux Storefront Labs is a performance-first frontend theme system designed for modern eCommerce. Its primary goal is to deliver exceptional speed and a seamless user experience by adhering to strict performance budgets and Core Web Vitals targets.
